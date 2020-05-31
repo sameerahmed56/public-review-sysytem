@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+            </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+            </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+        <title>LogIn PRS</title>
+</head>
+<body>
+    <style>
+        body{
+           /* background-image: linear-gradient(to right, #1d2b64, #624b7f, #99719a, #cb9db8, #f8cdda); */
+            /* background-color: cyan; */
+            font-family:Arial, Helvetica, sans-serif;
+            /* background-image: linear-gradient(to right, #1d2b64, #5e447d, #946194, #c782a9, #f6a7bf); */
+            /* background-image: linear-gradient(to left, #203f70, #4e588b, #7673a5, #9e90c1, #c5aedc); */
+            background-image: linear-gradient(to right top, #5ebdc1, #0093b0, #00699b, #003e7d, #1a1152);        }
+        .goi{
+        color: white;
+        font-size: 34px;
+        }
+.prs{
+  background: -webkit-linear-gradient(#e6e91c, #77b2d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 34px;
+}
+.navbar-toggler-icon{
+  color: white;
+  background-color: none;
+}
+#navbar{
+ /* background-color: rgba(17, 27, 28, 0.2); */
+ background-color: none;
+ border-radius: 10px;
+
+
+}
+#navlink,#navbtn{
+  color: ivory;
+  font-size: 20px;
+}
+.logo{
+    border-radius: 14px;
+}   
+        .box{
+            box-sizing: border-box;
+            box-shadow: 0px 11px 35px 2px rgba(0,0,0, 0.14);
+            padding: 0px;
+            border-radius: 20px;
+        }
+        .loginbox{
+            background-color: white;
+            border-bottom-right-radius: 20px ;
+            border-top-right-radius: 20px;
+        }
+        .template{
+            padding: 0px;
+            background-color: chartreuse;
+            background: url(2.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .template-review{
+            text-align: center;
+            margin-top: 40%;
+            /* margin-left: 32%; */
+            color:palegoldenrod;
+            font-size: 380%;
+            font-family:cursive;
+
+        }
+        .new-user{
+            text-align: center;
+            color: #454545;
+            margin-bottom: 5%;
+            font-size: 100%;
+        }
+        .new-user:hover{
+            background-color: #00adb8;
+        }
+        input{
+            width: 90%;
+            margin-left:5%;
+            margin-bottom: 7%;
+            background: none;
+            padding-bottom: 2%;
+            border: none;
+            border-bottom: 2px solid #222222;
+            outline: none;
+            color: #000;
+            transition-timing-function: ease-in;
+            transition: border-bottom 1s;
+            position: relative;
+            
+
+            
+        }
+        input:focus{
+            transition-delay: 0.1s;
+            border-bottom: 2px solid skyblue;
+
+
+        }
+      
+        label{
+            margin-left: 9%;
+            text-decoration: solid;
+            font-size: 18px;
+        
+        }
+        .heading{
+            background: -webkit-linear-gradient(#1d2b64, #70afe6);
+             -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 38px;
+            text-align: center;
+            margin-top: 8%;
+            padding-bottom: 7%;
+        }
+        .btn{
+            width: 100%;
+            color: blanchedalmond;
+            margin-bottom: 15%;
+            margin-top: 10%;
+            padding: 5% 0 5% 0;
+            transition-timing-function: ease-in;
+            transition: all 2s;
+            background-image: linear-gradient(to right, #1d2b64, #2a568d, #4484b2, #6bb3d5, #9ce2f6);
+            border-radius: 15px;
+            
+        }
+        .btn:hover{
+            
+          background-image: linear-gradient(to right top, #5967ad, #0081c3, #0099c6, #00adb8, #10be9f);
+            transition-delay: 0.9s;
+            color: #ffffff;
+            
+        }
+        .error{
+            padding-left: 7%;
+        }
+    </style>
+    <script>
+        function validateFields(){
+            
+            function validateUsername(){
+                var username = document.getElementById("username").value;
+                var usernameValue = username.trim();
+                if (usernameValue == "") {
+                    document.getElementById("usererror").innerHTML = "Enter your username";
+                }
+                else if (usernameValue != "") {
+                    document.getElementById("usererror").innerHTML = "";
+                    return true;
+                }
+            }
+            function validatePassword(){
+                var password = document.getElementById("password").value;
+                var passwordValue = password.trim();
+                if (passwordValue == "") {
+                    document.getElementById("passerror").innerHTML = "Enter your password";
+                }
+                else if (passwordValue != "") {
+                    document.getElementById("passerror").innerHTML = "";
+                    return true;
+                }
+            }
+            var p = validatePassword();
+            var u = validateUsername();
+            if((p == true) && (u == true)){
+                window.location = "PortalPRS.html";
+            }
+            else{
+                alert("Fill alll Fields!")
+            }
+        }
+    </script>
+        <div class="container-fluid">
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+                <a id="navlogo" class="navbar-brand" href="HomePRS.html"><img class="logo" src="gov.png" width="50px" height="50px"
+                        alt="GOV LOGO"> <strong class="goi">GOI-</strong><strong> <span class="prs">PRS</span></strong></a>
+                <button id="navbar" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-right mr-auto">
+                        <li class="nav-item ">
+                            <a id="navlink" class="nav-link" href="AboutPRS.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="ContactPRS.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Contracts
+                            </a>
+                            <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Roads</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Bridges</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Buildings</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Near You
+                            </a>
+                            <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ongoing Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Completed Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Future Projects</a>
+                            </div>
+                        </li>
+                    </ul>
+        
+                    <ul class="navbar-nav navbar-right ">
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="RegisterPRS.html">Register <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="LogInPRS.html">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar ends  -->
+    <br> <br> <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-1"></div>
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10 box ">
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-3 template">
+                           <!-- <h1 class="template-review"> Review</h1> -->
+                        </div>
+                        <div class="col-xl-7 col-lg-7 co-md-7 col-sm-7 col-9 loginbox">
+                   
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                            <h2 class="heading"> <strong>User </strong> LogIn</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 inpt">
+                            <label for="username">Username</label>
+                            <input type="text" class="username" id="username">
+                            <span class="error" id="usererror" style="color: red;"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 inpt">
+                            <label for="username">Password</label>
+                            <input type="password" class="password" id="password">
+                            <span class="error" id="passerror" style="color: red;" ></span>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+                            <button class="btn" type="submit" onclick="validateFields()">LogIn</button>
+        
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+        
+                    </div>
+                    <a href="RegisterPRS.html"><h5 class="new-user">New User? Register Here</h5></a>
+                    </div>
+                    </div>
+                    </div>
+
+                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-1"></div>
+        
+            </div>
+        </div>
+        <br><br><br>
+    
+        </body>
+        
+        </html>
+</body>
+</html>

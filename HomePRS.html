@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+        </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+    <title>Home PRS</title>
+</head>
+<body>
+    <script>
+        function about(){
+            window.location = "AboutPRS.html";
+        }
+        function register(){
+            window.location = "RegisterPRS.html";
+        }
+    </script>
+    <style>
+        body{
+            background-color:#fff;
+            font-family:sans-serif;
+        }
+        .goi{
+ color: white;
+ font-size: 34px;
+}
+.prs{
+  color:#EE982B;
+  font-size: 34px;
+}
+.navbar-toggler-icon{
+  color: white;
+  background-color: none;
+}
+#navbar{
+ /* background-color: rgba(17, 27, 28, 0.2); */
+ background-color: none;
+ border-radius: 10px;
+
+
+}
+#navlink,#navbtn{
+  color: #EBFCFF;
+  font-size: 20px;
+}
+.logo{
+    border-radius: 14px;
+}
+        .wrap{
+            background: linear-gradient(to right, #000046, #1cb5e0);
+            
+        }
+        .box{
+            height: 430px;
+            text-align: center;
+            padding: 0px;
+            padding-left: 15px;
+            word-wrap: break-word;
+        }
+        h2{
+            margin-top: 85px;
+            margin-left: 10%;
+            color: aliceblue;
+        }
+        .btn1,.btn2{
+            padding: .8% 3% .8% 3%;
+            margin-top: 120px;
+            background-color: #EE982B;
+            border: 4px solid #EE982B;
+            transition-timing-function: ease-in;
+            transition: background-color 0.5s; 
+            
+        }
+
+        button:hover{
+            background-color: #EBFCFF;   
+            border: 4px solid #EE982B ;  
+        }
+        .box-side{
+            /* background: linear-gradient(to left, #0b8793, #360033); */
+            font-family:cursive;
+        }
+        .templates{
+            top: -40px;
+            position: relative;
+            margin: 0px 20px 0px 20px;
+        }
+        .template1,.template2,.template3,.template4{
+            background-color:#E6F4F1;
+            height: auto;
+            color: #364954;
+            border: 5px solid #C8E4DE ;
+            padding: 15px;
+            font-size: 17px;
+            box-shadow: 0px 11px 35px 2px rgba(0,0,0, 0.14);
+        }
+
+    </style>
+    <div class="wrap">    
+        <div  class="container-fluid">
+        <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+            <a id="navlogo" class="navbar-brand" href="HomePRS.html"><img class="logo" src="gov.png" width="50px" height="50px"
+                    alt="GOV LOGO"> <strong class="goi">GOI-</strong><strong> <span class="prs">PRS</span></strong></a>
+            <button id="navbar" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav navbar-right mr-auto">
+                    <li class="nav-item">
+                        <a id="navlink" class="nav-link" href="ContactPRS.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Contracts
+                        </a>
+                        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Roads</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Bridges</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Buildings</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Near You
+                        </a>
+                        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Ongoing Projects</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Completed Projects</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Future Projects</a>
+                        </div>
+                    </li>
+                </ul>
+        
+                <ul class="navbar-nav navbar-right ">
+                    <li class="nav-item">
+                        <a id="navlink" class="nav-link" href="RegisterPRS.html">Register <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="navlink" class="nav-link" href="LogInPRS.html">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="conatiner">
+        <div class="row ">
+            <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9 col-8 box" >
+                <h2> PRS - A Step Towards 
+                    Better Government.</h2> 
+                <button class="btn1" onclick="about()">About PRS</button>
+                <button class="btn2" onclick="register()">Join Us</button>
+                
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-4 box-side">
+                <marquee width="100%" direction="up" height="320px" scrollamount="10"  behavior="alternate" style="color:#222222;"><p><strong> **All Government Projects Are Delayed Due To Covid-19 Pandemic.</strong></p> </marquee>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <div class="row templates">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template1">
+                <p><strong>1. Bharatmala: </strong> The development of any nation depends on the transportation networks and the ways in which they are being maintained.
+                The same holds true for the development of a huge and populous nation like India.</p>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template2">
+               <p><strong>2. Sagarmala: </strong>Vision of the Sagarmala Programme is to reduce logistics cost for EXIM and domestic trade with minimal infrastructure
+               investment. As part of Sagarmala Programme, more than 610 projects (Cost: Rs. 7.78 Lacs Cr.)</p>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template3">
+               <p><strong>3. Inland Waterways: </strong>Inland Waterways Authority of India (IWAI), anticipating an increase in cargo traffic, plans to purchase 8-10 inland
+            cargo vessels to operate on two key waterways – the Ganga and the Brahmaputra.
+</p>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template4">
+               <p><strong>3. Mumbai Trans Harbour Link, Shivaji Memorial: </strong>The proposed Mumbai Trans Harbour Link (‘MTHL') has been planned to facilitate decongestion of the island city by
+            improving connectivity between Island city and main land (Navi Mumbai) and development of Navi Mumbai Region.</p>
+            </div>
+            
+        </div>
+    
+</body>
+</html>

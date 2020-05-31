@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+        </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Registr PRS</title>
+<!-- <link rel="stylesheet" href="HomeImg.css"> -->
+<script src="RegisterPRS.js"></script>
+ 
+</head>
+<body>
+    <style>
+        
+label{
+  padding-left: 5%;
+}
+.error{
+    padding: 20px;
+}
+.lb{
+  text-align: left;
+  font-size: 110%;
+  font-style:normal;
+  font-family: arial;
+  padding-top: 1%;
+  color: black;
+  outline: none;
+  position: relative;
+  
+}
+.btnn{
+  margin-bottom: 15%;
+  background-image: linear-gradient(to right, #1d2b64, #2a568d, #4484b2, #6bb3d5, #9ce2f6);
+  color: white;
+  width: 110%;
+  border: 1px solid black;
+  text-align: center;
+  padding: 5% 0 5% 0;
+  border-radius: 10px;  
+}
+.btnn:hover{
+  /* background: #335890; */
+  /* background-image: linear-gradient(to right top, #5967ad, #0081c3, #0099c6, #00adb8, #10be9f); */
+  box-shadow: 5px 5px 5px #37516d;
+  background: linear-gradient(to right,#692fbf,#cc16c3);
+}
+.cb{
+  text-align: center;
+  font-size: 110%;
+  font-style:normal;
+  font-family: arial;
+  padding-top: 5%;
+  color: #77120c;
+}
+input{
+  width: 100%;
+  position: relative;
+  background: white;
+  /* box-shadow: 1px 1px 2px #545454; */
+  text-align: left;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: left;
+  padding-left: 5%;
+  border: none;
+  border-bottom: 1px solid #222222;
+  outline: none;
+  color: #000;
+  transition-timing-function: ease-in;
+  transition: border 1s;
+}
+input:focus{
+  transition-delay: 0.1s;
+  border: 2px solid #da378e;
+  border-radius: 10px;
+            
+}
+
+
+
+/* ----- */
+   body{
+   font-family:sans-serif;
+   /* background-size: cover;
+   background-image: linear-gradient(to right top, #5ebdc1, #0093b0, #00699b, #003e7d, #1a1152); */
+   background-image: linear-gradient(to right top, #5ebdc1, #0093b0, #00699b, #003e7d, #1a1152);
+            
+}
+
+.goi{
+ color: white;
+ font-size: 34px;
+}
+.prs{
+  background: -webkit-linear-gradient(#e6e91c, #77b2d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 34px;
+}
+.navbar-toggler-icon{
+  color: white;
+  background-color: none;
+}
+#navbar{
+ /* background-color: rgba(17, 27, 28, 0.2); */
+ background-color: none;
+ border-radius: 10px;
+
+
+}
+#navlink,#navbtn{
+  color: ivory;
+  font-size: 20px;
+}
+.logo{
+    border-radius: 14px;
+}   
+.heading{
+  text-align: center;
+   font-size: 42px;
+  background: -webkit-linear-gradient(#1d2b64, #70afe6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 5%;
+  padding-bottom: 4%;
+ 
+}
+
+.box{
+    padding: 0px;
+    box-shadow: 0px 11px 35px 2px rgba(0,0,0, 0.14);
+    border-radius: 22px;
+}
+.template{
+    /* background-color: #fff; */
+    background:url(10.png) #ffffff;
+    background-position-x: 100%;
+    background-size: cover;
+    padding: 0px;
+    border-bottom-right-radius: 22px;
+    border-top-right-radius: 22px;
+}
+.loginbox{
+  background-color: #ffffff;
+  padding: 0px;
+  border-bottom-left-radius: 22px;
+  border-top-left-radius: 22px;
+  
+}
+    </style>
+
+            <div class="container-fluid">
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+                <a id="navlogo" class="navbar-brand" href="HomePRS.html"><img class="logo" src="gov.png" width="50px" height="50px"
+                        alt="GOV LOGO"> <strong class="goi">GOI-</strong><strong> <span class="prs">PRS</span></strong></a>
+                <button id="navbar" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-right mr-auto">
+                        <li class="nav-item ">
+                            <a id="navlink" class="nav-link" href="AboutPRS.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="ContactPRS.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Contracts
+                            </a>
+                            <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Roads</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Bridges</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Buildings</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Near You
+                            </a>
+                            <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ongoing Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Completed Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Future Projects</a>
+                            </div>
+                        </li>
+                        <!-- <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-warning bg-info my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+                    </ul>
+        
+                    <ul class="navbar-nav navbar-right ">
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="RegisterPRS.html">Register <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="LogInPRS.html">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar ends  -->
+        <br><br>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-1"></div>
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10 box ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-9 col-lg-9 co-md-9 col-sm-9 col-9 loginbox">
+                                <h2 class="heading"><strong>User </strong>Register</h2>
+                                
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="firstname">First Name:</label><br>
+                    <input id="firstname" type="text" name="firstname" placeholder="Enter First Name"
+                        onkeyup="validateName('firstname','firstnameerror')" required>
+                    <span class="error" id="firstnameerror" style="color:red"></span>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="lastname">Last Name:</label><br>
+                    <input id="lastname" type="text" name="lastname" placeholder="Enter Last Name"
+                        onkeyup="validateName('lastname','lastnameerror')" required>
+                    <span class="error" id="lastnameerror" style="color:red"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="name">Aadhar Number:</label><br>
+                    <input id="aadharnumber" type="number" name="aadharnumber" placeholder="Enter Aadhar Number" onkeyup="validateAadharNumber('aadharnumber','aadharnumbererror')" required>
+                    <span class="error" id="aadharnumbererror" style="color:red"></span>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="name">Father Name:</label><br>
+                    <input id="fname" type="text" name="fathername" placeholder="Enter Father's Name"
+                        onkeyup="validateName('fname','fnameerror')" required>
+                    <span class="error" id="fnameerror" style="color:red"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="name">Mobile Number:</label><br>
+                    <input id="mobilenumber" type="number" name="mobilenumber" placeholder="Enter Mobile No."
+                        onkeyup="validateNumber('mobilenumber','mobilenumbererror')" required>
+                    <span class="error" id="mobilenumbererror" style="color:red"></span>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="username">Username:</label><br>
+                    <input id="username" type="text" name="username" placeholder="Enter Your Username"
+                        onkeyup="validateUsername('username','usernameerror')" required>
+                    <span class="error" id="usernameerror" style="color:red"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="password">Password:</label><br>
+                    <input id="password" type="password" name="password" placeholder="Enter Your Password" onkeyup="validatePassword('password','passworderror')" required> 
+                    <span class="error" id="passworderror" style="color:red"></span>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="cnfpassword">Confirm Password:</label><br>
+                    <input id="cnfpassword" type="password" name="cnfpassword" placeholder="Re-Enter Your Password"
+                        onkeyup="validateCnfPassword('cnfpassword','cnfpassworderror')" required>
+                    <span class="error" id="cnfpassworderror" style="color:red"></span>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="name">E-Mail:</label><br>
+                    <input id="email" type="text" name="email" placeholder="Enter E-Mail"  onkeyup="validateEmail('email','emailerror')" required>
+                    <span class="error" id="emailerror" style="color:red"></span>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 lb">
+                    <label for="name">Date Of Birth:</label><br>
+                    <input id="dob" type="date" name="dob" placeholder="Enter Date Of Birth" onkeyup="validateDob('dob','doberror')" required>
+                    <span class="error" id="doberror" style="color:red"></span>
+                </div>
+                </div>
+                <br>
+            <!-- button row starts -->
+            
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                    <input class="btnn" type="submit" name="submit" value="Submit" onclick="onClick()">
+                    <br>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4"></div>
+        
+            </div>
+        
+            <!-- button row end -->
+        </div>
+        
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1"></div>
+                            </div>
+                            <!-- loginbox div -->
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 template">
+                                <!-- <h1 class="template-review"> Review</h1> -->
+                            </div>
+  
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-1"></div>
+        
+            </div>
+        </div>
+        <br>
+</body>
+</html>
