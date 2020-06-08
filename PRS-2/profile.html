@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    
+</head>
+<body>
+    <!-- <script>
+      function displayProfile() {
+            fetch("http://jsonplaceholder.typicode.com/users/1")
+                .then(function (response) {
+                    if (response.status == 200) {
+                        return response.json();
+                    } else {
+                        throw new Error('Invalid user ID');
+                    }
+                })
+                .then((data) => {
+                    console.log(data);
+                    document.getElementById('nameOut').innerHTML = data.name;
+                    document.getElementById('emailOut').innerHTML = data.email;
+                    document.getElementById('phoneOut').innerHTML = data.phone;
+                    var addressData = data.address.suite + ", " + data.address.street + ", " + data.address.city;
+                    console.log(addressData);
+                    document.getElementById('addressOut').innerHTML = addressData;
+                    document.getElementById('websiteOut').innerHTML = data.website;
+
+
+                })
+                .catch((err) => {
+                    console.log('ERROR: ', err.message);
+                });
+
+        }  
+    </script> -->
+    <style>
+        .profile {
+            background-color: #F6F8FF;
+            text-align: left;
+            box-sizing: border-box;
+            padding-left: 80px;
+            padding-bottom: 1%;
+            margin-top: 1%;
+            letter-spacing: 1px;
+        
+        }
+    
+        .heading-profile {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 2% 0px;
+            letter-spacing: 2px;
+            background-color: #00B5C3;
+            color: #222222;
+            text-align: center;
+        }
+    
+        .profile-dp {
+            width: auto;
+            height: 250px;
+            border-radius: 50%;
+            align-content: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5%;
+            margin-bottom: 5%;
+            display: block;
+        }
+        h3{
+            text-align: left;
+            padding-left: 30%;
+        }
+    </style>
+        <div class="heading-profile">
+        <h1>Your Profile</h1>
+        </div>
+        <div class="profile">
+        <img class="profile-dp" src="profile.png" alt="profile pic">
+        <h3><Strong>Name: </Strong><span id="nameOut"></span></h3>
+        <h3><Strong>Phone No: </Strong><span id="phoneOut"></span></>
+        <h3><Strong>Email: </Strong><span id="emailOut"></span></h3>
+        <h3><Strong>Address: </Strong><span id="addressOut"></span></h3>
+        <h3><Strong>Zipcode: </Strong><span id="zipcodeOut"></span></h3>   
+        <h3><Strong>Website: </Strong><span id="websiteOut"></span></h3>
+        <br><br><br>
+       </div>
+</body>
+</html>

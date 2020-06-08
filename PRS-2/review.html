@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      var myApp = angular.module("myApp", []);
+        myApp.controller('firstController', function ($scope) {
+            $scope.name = '';
+            $scope.rate = '';
+        })
+
+    </script>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #f4f5fd;
+        }
+        .heading-review{
+            text-align: center;
+            background-color: #00B5C3;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            margin-top: 1%;
+            color: #222222;
+            letter-spacing: 2px;
+
+        }
+        .heading-location{
+            text-align: left;
+            background-color: #DCF2F1;
+            padding-top: 2.5%;
+            padding-bottom: 2.5%;
+            margin-top: 1%;
+            padding-left: 90px;
+            letter-spacing: 2px;
+
+        }
+        img{
+           width: 50%;
+           height: auto;
+           margin-left: auto;
+           margin-right: auto;
+           display: block;
+       }
+        .project1, .project2{
+           background-color:#F7F9FF;
+           font-size: 20px;
+           margin-top: 3%;
+           padding:2%;
+           /* margin-left: 1%; */
+           padding-left: 8%;
+           border: 1px solid #8f8f91;
+           letter-spacing: 0.5px;
+
+       }
+        input{
+        width: 20%;
+       }
+    </style>
+   <div class="heading-review">
+       <h1>Review</h1>
+   </div>
+   <div class="heading-location">
+       <h4> Your Location Is- <strong><span id="addressOut"></span></strong> </h4>
+       <h5>Here are Projects you have Reviewed from <strong><span id="cityOut"></span></strong></h5>
+   </div>
+   <div class="project1" >
+        <p>
+            <h3><strong> 1. Metro: </strong></h3>
+            <img src="1metro.jpg" alt="bhartamala"><br>
+            Its is going to be metro service from Ghaziabad City (New Bus Adda) to Duhai.
+        </p>
+        <p><strong>Cost:</strong>Rs 5000 crore</p>
+        <p><strong>Completion of 1st Phase:</strong>By 2021-22</p>
+         <div class="input" ng-app="myApp" ng-controller="firstController"> enter your score out of 10 <br>
+            <strong>Rate:</strong>
+            <input ng-model="name"><br>
+            <progress id="file" value="{{name}}" max="10"> </progress>
+            {{name}}/10
+        </div>
+     </div>   
+        <div class="project2">
+            <p>
+                <h3><strong> 1. Cement And Polymer Plans: </strong></h3>
+                <img src="1cement.jpg" alt="bhartamala"><br>
+            Cement & Polymers Plans To Set Up A Cement Grinding Unit In Ghaziabad.
+            </p>
+            <p><strong>Cost:</strong>Rs 26.94 crore</p>
+            <p><strong>Completion of 1st Phase:</strong>By 2021-22</p>
+            <div class="input" ng-app="myApp" ng-controller="firstController"> enter your score out of 10 <br>
+                <strong>Rate:</strong>
+                <input ng-model="rate"><br>
+                <progress id="file" value="{{rate}}" max="10"> </progress>
+                {{rate}}/10
+            </div>
+        </div>
+</body>
+</html>

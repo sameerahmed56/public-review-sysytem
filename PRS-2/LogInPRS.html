@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- JS, Popper.js, and jQuery -->
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            </script> -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+            </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+            </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
+        <title>LogIn PRS</title>
+</head>
+<body>
+    <style>
+        body{
+            font-family:sans-serif;
+            /* background-image: linear-gradient(to right top, #b0b9dd, #c09dcb, #d27ea0, #cf6863, #ad651f); */
+            background-image: linear-gradient(to right top, #b0b9dd, #d2aedc, #f7a0c1, #ff9c91, #f6a85d);
+        }
+
+.prs{
+  background: -webkit-linear-gradient(#a11cbf, #367ed6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 34px;
+  letter-spacing: 3px;
+}
+.navbar-toggler-icon{
+  color: white;
+  background-color: none;
+}
+#navbar{
+ /* background-color: rgba(17, 27, 28, 0.2); */
+ background-color: none;
+ border-radius: 10px;
+
+
+}
+#navlink,#navbtn{
+  color: ivory;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+        .box{
+            box-sizing: border-box;
+            box-shadow: 0px 11px 35px 2px rgba(0,0,0, 0.24);
+            padding: 0px;
+            border-radius: 20px;
+        }
+        .loginbox{
+            background-color: white;
+            border-bottom-right-radius: 20px ;
+            border-top-right-radius: 20px;
+        }
+        .template{
+            padding: 0px;
+            background-color: chartreuse;
+            background: url(2.jpg);
+            /* clip-path: polygon(100% 0, 100% 60%, 75% 100%, 25% 100%, 0 60%, 0 0); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-bottom-left-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+        .template-review{
+            text-align: center;
+            margin-top: 40%;
+            /* margin-left: 32%; */
+            color:palegoldenrod;
+            font-size: 380%;
+            font-family:cursive;
+
+        }
+        .new-user{
+            text-align: center;
+            color: #454545;
+            margin-bottom: 5%;
+            font-size: 100%;
+        }
+        .new-user:hover{
+            /* background-color: #00adb8; */
+            color:#70afe6;
+        }
+        input{
+            width: 90%;
+            margin-left:5%;
+            margin-top: 5%;
+            margin-bottom: 7%;
+            background: none;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            border: none;
+            border-bottom: 2px solid #222222;
+            outline: none;
+            color: #000;
+            transition-timing-function: ease-in;
+            transition: border-bottom 1s;
+            position: relative;   
+        }
+        input:focus , input:valid{
+            transition-delay: 0.1s;
+            border-bottom: 2px solid #bd4879;
+            top: 25%;
+
+        }
+      
+        label{
+            margin-left: 9%;
+            position: absolute;
+            top: 30%;
+            letter-spacing: 2px;
+            
+        
+        }
+        .heading-loginbox{
+            background: -webkit-linear-gradient(#1d2b64, #70afe6);
+             -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 38px;
+            text-align: center;
+            margin-top: 8%;
+            letter-spacing: 2px;
+        }
+        .btn-login{
+            width: 100%;
+            color: blanchedalmond;
+            margin-bottom: 15%;
+            margin-top: 10%;
+            padding: 5% 0 5% 0;
+            background-image: linear-gradient(to right, #1d2b64, #2a568d, #4484b2, #6bb3d5, #9ce2f6);
+            border-radius: 18px; 
+            border: 1px solid #111111;
+            letter-spacing: 3px;
+            transition: all 0.5s;
+            transition-timing-function: ease-out;
+            
+        }
+        .btn-login:hover{
+          background-image: linear-gradient(to right, #4b66cf, #735ed0, #9753cb, #b642c1, #d22ab2);
+          color: #ffffff;
+          border: 1px solid #ffffff;
+          box-shadow: 5px 10px 25px #37516d;
+          
+            
+        }
+    </style>
+        <script>
+
+
+            function validateUsername() {
+                var username = document.getElementById("username").value;
+                var usernameValue = username.trim();
+                if (usernameValue == "") {
+                    // document.getElementById("usererror").innerHTML = "Enter your username";
+                    $("#username").css({ "border": "none", "border-bottom": "2px solid red" });
+                }
+                else if (usernameValue != "") {
+                    // document.getElementById("usererror").innerHTML = "";
+                    $("#username").css({ "border": "none", "border-bottom": "2px solid green" });
+                    return true;
+                }
+            }
+            function validatePassword() {
+                var password = document.getElementById("password").value;
+                var passwordValue = password.trim();
+                if (passwordValue == "") {
+                    // document.getElementById("passerror").innerHTML = "Enter your password";
+                    $("#password").css({ "border": "none", "border-bottom": "2px solid red" });
+                }
+                else if (passwordValue != "") {
+                    // document.getElementById("passerror").innerHTML = "";
+                    $("#password").css({ "border": "none", "border-bottom": "2px solid green" });
+                    return true;
+                }
+            }
+            function validateFields() {
+                var p = validatePassword();
+                var u = validateUsername();
+                if ((p == true) && (u == true)) {
+                    validateAPI();
+                }
+                else {
+                    alert("Fill alll Fields!")
+                }
+            }
+            function validateAPI() {
+                    fetch("http://jsonplaceholder.typicode.com/users/2")
+                        .then(function (response) {
+                            if (response.status == 200) {
+                                return response.json();
+                            } else {
+                                throw new Error('Invalid user ID');
+                            }
+                        })
+                        .then((data) => {
+                            console.log(data);
+                            var usernameData = document.getElementById("username").value;
+                            var passwordData = document.getElementById("password").value;
+                            if ((data.username == usernameData) && (data.id == passwordData)) {
+                                window.location = "PortalPRS.html";
+                            }
+                            else {
+                                alert("Invalid Credentials");
+                            }
+
+
+
+
+                        })
+                        .catch((err) => {
+                            console.log('ERROR: ', err.message);
+                        });
+                }
+        </script>
+        <div class="container-fluid">
+            <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
+                <a id="navlogo" class="navbar-brand" href="HomePRS.html"><img src="logo1.png" width="50px" height="50px"
+                        alt="GOV LOGO"><span class="prs"><strong>PRS</strong></span></></a>
+                <button id="navbar" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav navbar-right mr-auto">
+                        <li class="nav-item ">
+                            <a id="navlink" class="nav-link" href="AboutPRS.html">About <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="ContactPRS.html">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Contracts
+                            </a>
+                            <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Roads</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Bridges</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Buildings</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Near You
+                            </a>
+                            <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Ongoing Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Completed Projects</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Future Projects</a>
+                            </div>
+                        </li>
+                        <!-- <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-warning bg-info my-2 my-sm-0" type="submit">Search</button>
+                </form> -->
+                    </ul>
+        
+                    <ul class="navbar-nav navbar-right ">
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="RegisterPRS.html">Register <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="navlink" class="nav-link" href="LogInPRS.html">Log In</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- navbar ends  -->
+    <br> <br> <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-1"></div>
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-10 box ">
+                    <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 template">
+                           <!-- <h1 class="template-review"> Review</h1> -->
+                        </div>
+                        <div class="col-xl-7 col-lg-7 co-md-7 col-sm-7 col-7 loginbox">
+                   
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                            <h2 class="heading-loginbox"> <strong>User </strong> LogIn</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 inpt">
+                            <label for="username">Username</label>
+                            <input type="text" class="username" id="username" onkeyup="validateUsername()" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 inpt">
+                            <label for="username">Password</label>
+                            <input type="password" class="password" id="password" onkeyup="validatePassword()" required>
+                        </div>
+                    </div>
+        
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+                            <button class="btn-login" type="submit" onclick="validateFields()">LogIn</button>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"></div>
+        
+                    </div>
+                    <a href="RegisterPRS.html"><h5 class="new-user">New User? Register Here</h5></a>
+                    <br><br>
+                    </div>
+                    </div>
+                    </div>
+
+                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-1"></div>
+        
+            </div>
+        </div>
+        <br><br><br>
+        <br><br><br>
+        <br><br><br>
+        <br>
+        </body>
+        
+        </html>
+</body>
+</html>
