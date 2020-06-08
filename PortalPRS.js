@@ -71,7 +71,7 @@ $(document).ready(function () {
 });
 // ------
 function logOut(){
-    window.location = "LoginPRS.html";
+    window.location = "LogInPRS.html";
 }
 // -------
 function displayProfile() {
