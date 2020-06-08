@@ -114,6 +114,22 @@ function displayDashboard(){
             console.log('ERROR: ', err.message);
         });
 }
+function displayDashboardClick(){
+    fetch("http://jsonplaceholder.typicode.com/users/2")
+        .then(function (response) {
+            if (response.status == 200) {
+                return response.json();
+            } else {
+                throw new Error('Invalid user ID');
+            }
+        })
+        .then((data) => {
+            document.getElementById('nameOut').innerHTML = data.name;
+        })
+        .catch((err) => {
+            console.log('ERROR: ', err.message);
+        });
+}
 function displayReview() {
     fetch("http://jsonplaceholder.typicode.com/users/2")
         .then(function (response) {
