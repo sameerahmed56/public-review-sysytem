@@ -50,45 +50,45 @@ function validateEmail(a, b) {
     var emailValue = email.trim();
     var arr = emailValue.split("@");
     var alphabet = /^[A-Za-z0-9@|.]+$/;
-    
+
     if (emailValue.match(alphabet)){
         if (emailValue == "") {
-            document.getElementById(b).innerHTML = "Enter Your Email";
+            document.getElementById(b).innerHTML = "Enter Valid Email";
         }
         else if ((emailValue.indexOf('@') == 0) || (emailValue.indexOf('.') == 0)) {
-            document.getElementById(b).innerHTML = "Email can't start with @ .";
+            document.getElementById(b).innerHTML = "Enter Valid Email";
         }
         else if ((emailValue.charAt(0) == 9) || (emailValue.charAt(0) == 8) || (emailValue.charAt(0) == 7) || (emailValue.charAt(0) == 6) || (emailValue.charAt(0) == 5) || (emailValue.charAt(0) == 4) || (emailValue.charAt(0) == 3) || (emailValue.charAt(0) == 2) || (emailValue.charAt(0) == 1) || (emailValue.charAt(0) == 0)) {
-            document.getElementById(b).innerHTML = "Email Can't Start With A Number";
+            document.getElementById(b).innerHTML = "Enter Valid Email";
         }
         else if (arr.length > 2) {
-            document.getElementById(b).innerHTML = "Email cannot have 2 @";
+            document.getElementById(b).innerHTML = "Enter Valid Email";
         }
         else if (emailValue.lastIndexOf('.') - emailValue.indexOf('@') < 5) {
-            document.getElementById(b).innerHTML = "Enter Valid Email Only";
+            document.getElementById(b).innerHTML = "Enter Valid Email";
         }
         else if (emailValue.lastIndexOf('.') >= (emailValue.length - 2)) {
             document.getElementById(b).innerHTML = "Enter Valid Email";
         }
         else if ((emailValue.indexOf('@') == -1) || (emailValue.indexOf('.') == -1)) {
-            document.getElementById(b).innerHTML = "Enter Valid Email with {@,.}";
+            document.getElementById(b).innerHTML = "Enter Valid Email";
         }
-        
-        
+
+
         else {
             document.getElementById(b).innerHTML = "";
             return true;
         }
     }
     else {
-        document.getElementById(b).innerHTML = "Enter valid email";
+        document.getElementById(b).innerHTML = "Enter Valid Email";
     }
 }
 
 function validateUsername(a,b){
     var username =  document.getElementById(a).value;
     var usernameValue = username.trim();
-    
+
     if (usernameValue == "") {
         document.getElementById(b).innerHTML = "Enter your Username";
     }
@@ -103,12 +103,12 @@ function validateUsername(a,b){
         document.getElementById(b).innerHTML = "";
         return true;
     }
-   
 
-} 
+
+}
 function validatePassword(a,b){
     var password = document.getElementById(a).value;
-    
+
     if (password == ""){
         document.getElementById(b).innerHTML = "Enter Your Password";
     }
@@ -153,7 +153,7 @@ function onClick() {
     var y = validateEmail('email','emailerror');
     var z = validateAadharNumber('aadharnumber','aadharnumbererror');
     if ((q == true) && (r == true) && (s == true) && (t == true) && (u == true) && (v == true) && (w == true) && (x == true) && (y == true) && (z == true)) {
-        window.location="LogInPRS.html";    }
+        window.location="LogInImg.html";    }
     else {
         alert("Fill All Fields Correctly");
     }

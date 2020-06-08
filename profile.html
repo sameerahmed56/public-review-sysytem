@@ -2,36 +2,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+    <title>Profile</title>
+
 </head>
 <body>
+
     <style>
         .profile {
-            background-color: lightcyan;
+            background-color: #F6F8FF;
             text-align: left;
             box-sizing: border-box;
             padding-left: 80px;
             padding-bottom: 1%;
             margin-top: 1%;
-            
-    
+            letter-spacing: 1px;
+
         }
-    
-        .heading {
+
+        .heading-profile {
             text-align: center;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            padding-top: 2%;
+            padding: 2% 0px;
+            letter-spacing: 2px;
+            background-color: #00B5C3;
+            color: #222222;
+            text-align: center;
         }
-    
+
         .profile-dp {
             width: auto;
-            height: 220px;
+            height: 250px;
             border-radius: 50%;
             align-content: center;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 5%;
+            padding-top: 5%;
             margin-bottom: 5%;
             display: block;
         }
@@ -40,16 +45,18 @@
             padding-left: 30%;
         }
     </style>
-       <div class="profile">
-        <h1 class="heading">Your Profile</h1>
+        <div class="heading-profile">
+        <h1>Your Profile</h1>
+        </div>
+        <div class="profile">
         <img class="profile-dp" src="profile.png" alt="profile pic">
-        <h3><Strong>Name: </Strong>Sameer Ahmed</h3>
-        <h3><Strong>Age: </Strong>20</h3>
-        <h3><Strong>Date Of Birth: </Strong>05-06-1999</h3>
-        <h3><Strong>Father Name: </Strong>Zulfekar Ahmed</h3>
-        <h3><Strong>Mothers Name: </Strong>Shahjadi Begum</h3>
-        <h3><Strong>Mobile Number: </Strong>9696805422</h3>
-        
+        <h3><Strong>Name: </Strong><span id="nameOut"></span></h3>
+        <h3><Strong>Phone No: </Strong><span id="phoneOut"></span></>
+        <h3><Strong>Email: </Strong><span id="emailOut"></span></h3>
+        <h3><Strong>Address: </Strong><span id="addressOut"></span></h3>
+        <h3><Strong>Zipcode: </Strong><span id="zipcodeOut"></span></h3>
+        <h3><Strong>Website: </Strong><span id="websiteOut"></span></h3>
+        <br><br><br>
        </div>
 </body>
 </html>

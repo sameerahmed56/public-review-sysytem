@@ -15,49 +15,57 @@
 </head>
 <body>
     <style>
-        .header{
+        body{
+            background-color: #f4f5fd;
+        }
+        .heading-review{
             text-align: center;
-            background-color: powderblue;
+            background-color: #00B5C3;
             padding-top: 2.5%;
             padding-bottom: 2.5%;
             margin-top: 1%;
+            color: #222222;
+            letter-spacing: 2px;
 
         }
-        .heading{
+        .heading-location{
             text-align: left;
-            background-color:paleturquoise;
+            background-color: #DCF2F1;
             padding-top: 2.5%;
             padding-bottom: 2.5%;
             margin-top: 1%;
             padding-left: 90px;
+            letter-spacing: 2px;
 
         }
-               img{
+        img{
            width: 50%;
            height: auto;
            margin-left: auto;
            margin-right: auto;
            display: block;
        }
-             .project1, .project2{
-           background-color:lightcyan;
+        .project1, .project2{
+           background-color:#F7F9FF;
            font-size: 20px;
            margin-top: 3%;
            padding:2%;
            /* margin-left: 1%; */
            padding-left: 8%;
+           border: 1px solid #8f8f91;
+           letter-spacing: 0.5px;
 
        }
-    input{
+        input{
         width: 20%;
-    }
+       }
     </style>
-   <div class="header">
-       <h2>Reviews</h2>
+   <div class="heading-review">
+       <h1>Review</h1>
    </div>
-   <div class="heading">
-       <h4> Your Location Is- <strong>Ghaziabad</strong> </h4>
-       <h5>Here are Projects you have Reviewed from Ghaziabad</h5>
+   <div class="heading-location">
+       <h4> Your Location Is- <strong><span id="addressOut"></span></strong> </h4>
+       <h5>Here are Projects you have Reviewed from <strong><span id="cityOut"></span></strong></h5>
    </div>
    <div class="project1" >
         <p>
@@ -73,7 +81,7 @@
             <progress id="file" value="{{name}}" max="10"> </progress>
             {{name}}/10
         </div>
-     </div>   
+     </div>
         <div class="project2">
             <p>
                 <h3><strong> 1. Cement And Polymer Plans: </strong></h3>

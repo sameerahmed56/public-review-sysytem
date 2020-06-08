@@ -6,7 +6,7 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
+
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -19,27 +19,32 @@
         </script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
-    <title>Home PRS</title>
+    <title>Landing Img</title>
 </head>
 <body>
     <script>
-        function about(){
+        function about() {
             window.location = "AboutPRS.html";
         }
-        function register(){
+        function register() {
             window.location = "RegisterPRS.html";
         }
     </script>
     <style>
+
         body{
+            padding: 0px;
+            margin: 0px;
             background-color:#fff;
             font-family:sans-serif;
         }
-        .goi{
+        /* .goi{
  color: white;
  font-size: 34px;
-}
+ letter-spacing: 3px;
+} */
 .prs{
+    letter-spacing: 3px;
   color:#EE982B;
   font-size: 34px;
 }
@@ -57,13 +62,17 @@
 #navlink,#navbtn{
   color: #EBFCFF;
   font-size: 20px;
+  letter-spacing: 2px;
 }
 .logo{
-    border-radius: 14px;
+    border-radius: 50%;
 }
         .wrap{
-            background: linear-gradient(to right, #000046, #1cb5e0);
-            
+            /* background: #fff; */
+            background: url(56.jpg);
+            /* background-size: cover; */
+            /* background-repeat: no-repeat; */
+
         }
         .box{
             height: 430px;
@@ -72,28 +81,33 @@
             padding-left: 15px;
             word-wrap: break-word;
         }
-        h2{
+        .heading-box{
+            letter-spacing: 3px;
             margin-top: 85px;
-            margin-left: 10%;
+            margin-left: 6%;
             color: aliceblue;
+            font-size: 34px;
         }
         .btn1,.btn2{
             padding: .8% 3% .8% 3%;
             margin-top: 120px;
+            letter-spacing: 2px;
             background-color: #EE982B;
             border: 4px solid #EE982B;
             transition-timing-function: ease-in;
-            transition: background-color 0.5s; 
-            
+            transition: all 1s;
+
         }
 
         button:hover{
-            background-color: #EBFCFF;   
-            border: 4px solid #EE982B ;  
+            background-color: #ffffff;
+            border: 4px solid #EE982B ;
+            /* color: #ffffff; */
         }
         .box-side{
             /* background: linear-gradient(to left, #0b8793, #360033); */
             font-family:cursive;
+            color:bisque;
         }
         .templates{
             top: -40px;
@@ -101,21 +115,122 @@
             margin: 0px 20px 0px 20px;
         }
         .template1,.template2,.template3,.template4{
-            background-color:#E6F4F1;
+            background-color:#f7eeee;
             height: auto;
-            color: #364954;
-            border: 5px solid #C8E4DE ;
+            color: #111111;
+            letter-spacing: 0.5px;
             padding: 15px;
             font-size: 17px;
             box-shadow: 0px 11px 35px 2px rgba(0,0,0, 0.14);
+
         }
+        .template1-border,.template2-border,.template3-border,.template4-border{
+       padding: 4px;
+       position: relative;
+       background: linear-gradient(to right, rgb(198, 69, 69), rgb(194, 154, 78));
+       border: 7px solid white;
+       border-top: none;
+       }
+       .template1-border{
+           border-left: 0px;
+       }
+       .template4-border{
+           border-right: 0px;
+       }
+       .template-heading{
+           text-align: center;
+           color:rgb(184, 104, 57);
+       }
+
+
+
+
+
+.floating {
+    height: 200px;
+    /* background: #fdfdfd; */
+    /* background-image: linear-gradient(to top, #f7f7f7, #eddbef, #f2bbd6, #f79baa, #ee816f); */
+    background: #fbf9f8;
+    position: relative;
+    transform: translateY(0);
+    transition-timing-function: ease-in;
+    transition: all 1s;
+    border: 10px solid white;
+    border-bottom: 0px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 3%;
+    /* overflow: hidden; */
+    color: #111111;
+    font-size: 36px;
+}
+.floating:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    height: 8px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, 0);
+    transition: transform 1s;
+}
+
+/* Hover States */
+.floating:hover {
+    transform: translateY(-35px);
+    /* background-image: linear-gradient(to right top, #c09545, #b18136, #a26d27, #92591a, #82460c); */
+    background-image: linear-gradient(to right top, #b39e43, #b59540, #b78c3e, #b7833d, #b77a3d, #bd7440, #c36e44, #c8674a, #d56158, #df5b69, #c9617d, #da5c93);
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* background-image: linear-gradient(to right, #bba021, #ba882b, #b17235, #a1603d, #8c5142); */
+    transition: all 1s;
+
+}
+.floating:hover:after {
+    transform: translate(-50%, 30px) scale(0.75);
+	transition: transform 1s;
+}
+
+.contact-us{
+    text-align: left;
+    /* background-color:rgba(179, 126, 46, 0.75); */
+    background-image: linear-gradient(to right, #dd679d, #f26c7b, #f47e57, #e49738, #c3b12a);
+    padding: 40px;
+    font-size: 22px;
+}
+.contact-heading{
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 35px;
+    padding-bottom: 20px;
+    }
+.contact-num{
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 480px) {
+    .btn1{margin-top: 50px;}
+    .btn2{margin-top: 50px;}
+    .floating{font-size: 20px;}
+}
+@media screen and (max-width: 350px) {
+    .btn1{margin-top: 10px;}
+    .btn2{margin-top: 10px;}
+}
 
     </style>
-    <div class="wrap">    
+    <div class="wrap">
         <div  class="container-fluid">
         <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
-            <a id="navlogo" class="navbar-brand" href="HomePRS.html"><img class="logo" src="gov.png" width="50px" height="50px"
-                    alt="GOV LOGO"> <strong class="goi">GOI-</strong><strong> <span class="prs">PRS</span></strong></a>
+            <a id="navlogo" class="navbar-brand" href="HomePRS.html"><img class="logo" src="logo1.png" width="50px" height="50px"
+                    alt="GOV LOGO"><strong> <span class="prs">PRS</span></strong></a>
             <button id="navbar" class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -124,14 +239,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-right mr-auto">
                     <li class="nav-item">
-                        <a id="navlink" class="nav-link" href="ContactPRS.html">Contact</a>
+                        <a id="navlink" class="nav-link" href="#contact-us">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navlink" role="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             Contracts
                         </a>
-                        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Roads</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Bridges</a>
@@ -144,7 +259,7 @@
                             aria-haspopup="true" aria-expanded="false">
                             Near You
                         </a>
-                        <div class="dropdown-menu bg-info" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu bg-warning" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Ongoing Projects</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Completed Projects</a>
@@ -153,7 +268,7 @@
                         </div>
                     </li>
                 </ul>
-        
+
                 <ul class="navbar-nav navbar-right ">
                     <li class="nav-item">
                         <a id="navlink" class="nav-link" href="RegisterPRS.html">Register <span class="sr-only">(current)</span></a>
@@ -168,39 +283,83 @@
     <div class="conatiner">
         <div class="row ">
             <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9 col-8 box" >
-                <h2> PRS - A Step Towards 
-                    Better Government.</h2> 
+                <h2 class="heading-box"> PRS - A Step Towards
+                    Better Government.</h2>
                 <button class="btn1" onclick="about()">About PRS</button>
                 <button class="btn2" onclick="register()">Join Us</button>
-                
+
             </div>
             <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-4 box-side">
-                <marquee width="100%" direction="up" height="320px" scrollamount="10"  behavior="alternate" style="color:#222222;"><p><strong> **All Government Projects Are Delayed Due To Covid-19 Pandemic.</strong></p> </marquee>
+                <marquee width="100%" direction="up" height="320px" scrollamount="10"  behavior="alternate"><p><strong> **All Government Projects Are Delayed Due To Covid-19 Pandemic.</strong></p> </marquee>
             </div>
         </div>
     </div>
-</div>
-        
+</div> <!-- div wrap -->
+
         <div class="row templates">
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template1">
-                <p><strong>1. Bharatmala: </strong> The development of any nation depends on the transportation networks and the ways in which they are being maintained.
-                The same holds true for the development of a huge and populous nation like India.</p>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template1-border">
+                <div class="template1">
+                    <h4 class="template-heading"><strong>TOP PROJECT</strong></h4>
+                    <p><strong>1. Bharatmala: </strong> The development of any nation depends on the transportation networks and the ways in
+                        which they are being maintained.
+                        The same holds true for the development of a huge and populous nation like India. It is a project for connecting major cities across Indian Cost.</p>
+                </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template2">
-               <p><strong>2. Sagarmala: </strong>Vision of the Sagarmala Programme is to reduce logistics cost for EXIM and domestic trade with minimal infrastructure
-               investment. As part of Sagarmala Programme, more than 610 projects (Cost: Rs. 7.78 Lacs Cr.)</p>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template2-border">
+                <div class="template2">
+                    <h4 class="template-heading"><strong>TOP PROJECT</strong></h4>
+                    <p><strong>2. Sagarmala: </strong>Vision of the Sagarmala Programme is to reduce logistics cost for EXIM and domestic
+                        trade with minimal infrastructure
+                        investment. As part of Sagarmala Programme, more than 610 projects (Cost: Rs. 7.78 Lacs Cr.). It is currently in its first stage of completion.</p>
+                </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template3">
-               <p><strong>3. Inland Waterways: </strong>Inland Waterways Authority of India (IWAI), anticipating an increase in cargo traffic, plans to purchase 8-10 inland
-            cargo vessels to operate on two key waterways – the Ganga and the Brahmaputra.
-</p>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template3-border">
+               <div class="template3">
+                <h4 class="template-heading"><strong>TOP PROJECT</strong></h4>
+                <p><strong>3. Inland Waterways: </strong>Inland Waterways Authority of India (IWAI), anticipating an increase in cargo
+                    traffic, plans to purchase 8-10 inland
+                    cargo vessels to operate on two key waterways – the Ganga and the Brahmaputra (These are the 2 longest rivers of Indian Subcontinenet).</p>
+               </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template4">
-               <p><strong>3. Mumbai Trans Harbour Link, Shivaji Memorial: </strong>The proposed Mumbai Trans Harbour Link (‘MTHL') has been planned to facilitate decongestion of the island city by
-            improving connectivity between Island city and main land (Navi Mumbai) and development of Navi Mumbai Region.</p>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 template4-border">
+               <div class="template4">
+                <h4 class="template-heading"><strong>TOP PROJECT</strong></h4>
+                <p><strong>3. Mumbai Trans Harbour Link, Shivaji Memorial: </strong>The proposed Mumbai Trans Harbour Link (‘MTHL') has
+                    been planned to facilitate decongestion of the island city by
+                    improving connectivity between Island city and main land (Navi Mumbai) and development of Navi Mumbai .</p>
+               </div>
             </div>
-            
         </div>
-    
+        <br><br><br><br>
+      <div class="container">
+        <div class="row float-div">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 floating" id="float-div1">
+                Right For Information.
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 floating" id="float-div2">
+                A Way For Transparency.
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 floating" id="float-div3">
+                Power To Public.
+            </div>
+        </div>
+     </div>
+        <br><br><br><br><br><br><br><br>
+        <div class="conatiner-fluid">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 contact-us">
+                    <h2 class="contact-heading" id="contact-us">Contact Us</h2>
+                    <div class="contact-num">
+                        <p>Prime Minister Office: 8585858585</p>
+                        <p>Director PRS: 9696805422</p>
+                        <p>Technical Head: 7905332677</p>
+                        <p>Head Of UP: 7878787878</p>
+                        <p>Joint-Director: 9898989898</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
 </body>
 </html>
